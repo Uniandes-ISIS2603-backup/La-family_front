@@ -59,15 +59,30 @@ export class BookListComponent implements OnInit {
       }
       
       
-    myFunction() {
-        let hello: Book[];
-        hello = Book[this.books.length]
-        this.books.forEach(element => {
-            if(element.name == document.getElementById("nameToCheck").nodeValue)
-            {
-                hello.push(element);
-            }
-        });
-        return hello;
+    filterBook() {
+        let rta: Book[]=[];
+        var i, td, txtValue, filter, input, count, j;
+        j=0;
+        input = document.getElementById("nameToCheck");
+        filter = input.value.toUpperCase();
+        if(filter=="" || filter==" ")
+        {
+            this.getBooks();
+            return;
+        }
+        for (i = 0; i < this.books.length; i++) {
+            td = this.books[i].name;
+            if (td.toUpperCase().indexOf(filter) > -1) {
+                console.log(this.books[i].name);
+                //this.books.splice(i, 1);
+                rta[j]= this.books[i];
+                j++;
+              } 
+              else{
+                  console.log(filter);
+              }
+          }
+          this.books=rta;
       }
+      
 }
