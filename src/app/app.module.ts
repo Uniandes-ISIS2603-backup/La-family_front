@@ -17,6 +17,7 @@ import {AuthorModule} from './author/author.module';
 import {AuthModule} from './auth/auth.module';
 import {BookModule} from './book/book.module';
 import {EditorialModule} from './editorial/editorial.module';
+import {HomeModule} from './home/home.module';
 
 
 
@@ -38,6 +39,7 @@ import {EditorialModule} from './editorial/editorial.module';
         AuthModule,
         BookModule,
         EditorialModule,
+        HomeModule,
         FormsModule,
         ToastrModule.forRoot({
             timeOut: 10000,

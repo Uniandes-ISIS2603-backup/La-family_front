@@ -8,6 +8,8 @@ import {BookListComponent} from '../book/book-list/book-list.component';
 import {EditorialListComponent} from '../editorial/editorial-list/editorial-list.component';
 import {AuthorDetailComponent} from '../author/author-detail/author-detail.component';
 import {BookDetailComponent} from '../book/book-detail/book-detail.component';
+import {HomeContentComponent} from '../home/home-content/home-content.component';
+
 import {EditorialDetailComponent} from '../editorial/editorial-detail/editorial-detail.component';
 import {BookCreateComponent} from '../book/book-create/book-create.component';
 import {BookEditComponent} from '../book/book-edit/book-edit.component';
@@ -50,6 +52,12 @@ const routes: Routes = [
                 runGuardsAndResolvers: 'always'
             }
         ]
+    },
+    {
+        path: 'homes',
+        component: HomeContentComponent,
+
+
     },
     {
         path: 'authors',
