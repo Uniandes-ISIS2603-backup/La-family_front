@@ -5,7 +5,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {NgxPermissionsModule} from 'ngx-permissions';
 
-import {EditorialListComponent} from './editorial-list/editorial-list.component';
+//import {EditorialListComponent} from './editorial-list/editorial-list.component';
 //import {EditorialService} from './editorial.service';
 import {AppRoutingModule} from '../app-routing/app-routing.module';
 //import {EditorialDetailComponent} from './editorial-detail/editorial-detail.component';
@@ -22,7 +22,7 @@ import {AppRoutingModule} from '../app-routing/app-routing.module';
         CommonModule,
         FormsModule,
     ],
-    declarations: [EditorialListComponent],//, EditorialDetailComponent, EditorialCreateComponent, EditorialEditComponent],
+    declarations: [],//,EditorialListComponent, EditorialDetailComponent, EditorialCreateComponent, EditorialEditComponent],
     providers: []
 })
 export class EditorialModule {}
