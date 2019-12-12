@@ -11,67 +11,25 @@
       </header>
       
       <!-- Page content -->
-      <div class="w3-content w3-padding" style="max-width:1564px">
+      <div class="container-fluid" >
       
         <!-- Project Section -->
         <div class="w3-container w3-padding-32" id="projects">
           <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Projects</h3>
         </div>
       
-        <div class="w3-row-padding">
-          <div class="w3-col l3 m6 w3-margin-bottom">
-            <div class="w3-display-container">
-              <div class="w3-display-topleft w3-black w3-padding">Summer House</div>
-              <img src="../assets/perro1.jpg" alt="House" style="width:100%">
+        <div class="row">
+            <div class="col" *ngFor = "let book of books">
+                <a routerLink="/books/{{book.id}}" style="cursor: pointer;"> 
+                    <img class="img-fluid" src='{{book.image}}' alt="{{book.name}}" />                                     
+                    <figcaption class="title-caption text-center">{{book.name}}</figcaption>
+                    <div *ngFor = "let author of book.authors">
+                        <figcaption class="author-caption text-center" routerLink="/authors/{{author.id}}">{{author.name}}</figcaption>
+                    </div>
+                  </a>
             </div>
-          </div>
-      
-          <div class="w3-col l3 m6 w3-margin-bottom">
-            <div class="w3-display-container">
-              <div class="w3-display-topleft w3-black w3-padding">Brick House</div>
-              <img src="../assets/perro1.jpg" alt="House" style="width:100%">
-            </div>
-          </div>
-          <div class="w3-col l3 m6 w3-margin-bottom">
-            <div class="w3-display-container">
-              <div class="w3-display-topleft w3-black w3-padding">Renovated</div>
-              <img src="../assets/perro1.jpg" alt="House" style="width:100%">
-            </div>
-          </div>
-          <div class="w3-col l3 m6 w3-margin-bottom">
-            <div class="w3-display-container">
-              <div class="w3-display-topleft w3-black w3-padding">Barn House</div>
-              <img src="../assets/perro1.jpg" alt="House" style="width:100%">
-            </div>
-          </div>
         </div>
       
-        <div class="w3-row-padding">
-          <div class="w3-col l3 m6 w3-margin-bottom">
-            <div class="w3-display-container">
-              <div class="w3-display-topleft w3-black w3-padding">Summer House</div>
-              <img src="../assets/perro1.jpg" alt="House" style="width:99%">
-            </div>
-          </div>
-          <div class="w3-col l3 m6 w3-margin-bottom">
-            <div class="w3-display-container">
-              <div class="w3-display-topleft w3-black w3-padding">Brick House</div>
-              <img src="../assets/perro1.jpg" alt="House" style="width:99%">
-            </div>
-          </div>
-          <div class="w3-col l3 m6 w3-margin-bottom">
-            <div class="w3-display-container">
-              <div class="w3-display-topleft w3-black w3-padding">Renovated</div>
-              <img src="../assets/perro1.jpg" alt="House" style="width:99%">
-            </div>
-          </div>
-          <div class="w3-col l3 m6 w3-margin-bottom">
-            <div class="w3-display-container">
-              <div class="w3-display-topleft w3-black w3-padding">Barn House</div>
-              <img src="../assets/perro1.jpg" alt="House" style="width:99%">
-            </div>
-          </div>
-        </div>
       
         <!-- About Section -->
         <div class="w3-container w3-padding-32" id="about">
@@ -98,14 +56,14 @@
             <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
           </div>
           <div class="w3-col l3 m6 w3-margin-bottom">
-            <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
+            <img src="" alt="Mike" style="width:100%">
             <h3>Mike Ross</h3>
             <p class="w3-opacity">Architect</p>
             <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
             <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
           </div>
           <div class="w3-col l3 m6 w3-margin-bottom">
-            <img src="/w3images/team4.jpg" alt="Dan" style="width:100%">
+            <img src="" alt="Dan" style="width:100%">
             <h3>Dan Star</h3>
             <p class="w3-opacity">Architect</p>
             <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
@@ -130,7 +88,7 @@
         
       <!-- Image of location/map -->
       <div class="w3-container">
-        <img src="/w3images/map.jpg" class="w3-image" style="width:100%">
+        <img src="" class="w3-image" style="width:100%">
       </div>
       
       <!-- End page content -->
