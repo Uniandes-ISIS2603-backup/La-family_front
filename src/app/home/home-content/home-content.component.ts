@@ -35,7 +35,8 @@ export class HomeContentComponent implements OnInit {
     ngOnInit() {
             this.getBooks();
         }
+
+        
     }
 
 
-}
