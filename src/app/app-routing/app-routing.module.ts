@@ -9,6 +9,8 @@ import {EditorialListComponent} from '../editorial/editorial-list/editorial-list
 import {AuthorDetailComponent} from '../author/author-detail/author-detail.component';
 import {BookDetailComponent} from '../book/book-detail/book-detail.component';
 import {HomeContentComponent} from '../home/home-content/home-content.component';
+import {MapaComponent} from '../mapa/mapa.component';
+
 
 import {EditorialDetailComponent} from '../editorial/editorial-detail/editorial-detail.component';
 import {BookCreateComponent} from '../book/book-create/book-create.component';
@@ -56,6 +58,12 @@ const routes: Routes = [
     {
         path: 'homes',
         component: HomeContentComponent,
+
+
+    },
+    {
+        path: 'mapas',
+        component: MapaComponent,
 
 
     },
