@@ -36,4 +36,11 @@ export class Book {
     * The editorial of the book
     */
     editorial: Editorial;
+
+
+    novedad: boolean;
+    precio : number ;
+    esBestseller: boolean;
+    categoria : string;
+
 }

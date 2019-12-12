@@ -19,6 +19,8 @@ const reviews = '/reviews';
 @Injectable()
 export class BookService {
 
+bestsellers : Book[];
+    novedades : Book[];
     /**
     * Constructor of the service
     * @param http The HttpClient - This is necessary in order to perform requests
@@ -75,5 +77,22 @@ export class BookService {
     */
     deleteBook(bookId): Observable<BookDetail> {
         return this.http.delete<BookDetail>(API_URL + books + '/' + bookId);
+    }
+
+
+    getNovedades(): void {
+        this.getBooks()
+            .subscribe(books => {
+                this.novedades = books;
+                this.novedades = this.novedades.filter(book => book.novedad == true);
+            });
+    }
+
+    getBestsellers(): void {
+        this.getBooks()
+            .subscribe(books => {
+                this.bestsellers = books;
+                this.bestsellers = this.bestsellers.filter(book => book.esBestseller == true);
+            });
     }
 }
