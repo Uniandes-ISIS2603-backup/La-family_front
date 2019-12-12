@@ -1,19 +1,22 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
 <div class="container-fluid">
         <p class="nav-item nav-link">Filtrar por nombre: <input   type="String" id="nameToCheck" >
             <button (click)="myFunction()" type="submit" class="btn btn-primary">Try it</button>
             <p>Libros: <span id="demo"></span> </p>  
-    <div class="row">
-        <div class="col-md-2" *ngFor = "let book of books">
-            <figure class="figure" routerLink="/books/{{book.id}}" style="cursor: pointer;"> 
-                <div class="img-thumbnail border-0">                        
-                    <img class="img-fluid" src='{{book.image}}' alt="{{book.name}}" />                                     
-                </div>
-                <figcaption class="title-caption text-center">{{book.name}}</figcaption>
-                <div *ngFor = "let author of book.authors">
-                    <figcaption class="author-caption text-center" routerLink="/authors/{{author.id}}">{{author.name}}</figcaption>
-                </div>
-            </figure>
-        </div>
+            <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+                    <!-- First Photo Grid-->
+                    <div class="w3-row-padding w3-padding-16 w3-center" *ngFor = "let book of books">
+                    <figure class="figure" routerLink="/books/{{book.id}}" style="cursor: pointer;" > 
+                        <div class="w3-quarter">
+                        <img src='{{book.image}}' alt="{{book.name}}" style="width:100%">
+                      </div>
+                    </figure>
+                    </div>
+                  
     </div>
-</div>
+
 
