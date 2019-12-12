@@ -16,6 +16,8 @@ export class HomeContentComponent implements OnInit {
     */
     constructor(private bookService: BookService, private route: ActivatedRoute) {}
 
+    books_best : Book[];
+    books_nov : Book [];
     books:Book[];
     allbooks: string = 'no';
     /**
@@ -29,6 +31,18 @@ export class HomeContentComponent implements OnInit {
             });
     }
 
+
+    getNovedades()
+    {
+        this.books_nov = this.bookService.novedades;
+    }
+
+
+    getBestsellers()
+    {
+        this.books_best = this.bookService.bestsellers;
+    }
+
     /**
     * The method which initializes the component
     */
@@ -38,5 +52,4 @@ export class HomeContentComponent implements OnInit {
 
         
     }
-
 
