@@ -159,4 +159,30 @@ export class AuthorListComponent implements OnInit {
         this.author_id = undefined;
         this.getAuthors();
     }
+
+    filterAuthor() {
+        let rta: Author[]=[];
+        var i, td, txtValue, filter, input, count, j;
+        j=0;
+        input = document.getElementById("nameToCheck");
+        filter = input.value.toUpperCase();
+        if(filter=="" || filter==" ")
+        {
+            this.getAuthors();
+            return;
+        }
+        for (i = 0; i < this.authors.length; i++) {
+            td = this.authors[i].name;
+            if (td.toUpperCase().indexOf(filter) > -1) {
+                console.log(this.authors[i].name);
+                //this.books.splice(i, 1);
+                rta[j]= this.authors[i];
+                j++;
+              } 
+              else{
+                  console.log(filter);
+              }
+          }
+          this.authors=rta;
+      }
 }

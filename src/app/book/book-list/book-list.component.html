@@ -8,8 +8,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 </style>
 <p class="nav-item nav-link">Filtrar por nombre: <input   type="String" id="nameToCheck" >
         <button (click)="filterBook()" type="submit" class="btn btn-primary">Filtrar</button></p>
-    <p class="nav-item nav-link">Filtrar por author: <input   type="String" id="name2ToCheck" >
-        <button (click)="filterBook()" type="submit" class="btn btn-primary">Filtrar</button></p>
+<p class="nav-item nav-link">Filtrar por isbn: <input   type="String" id="isbnToCheck" >
+        <button (click)="filterBook2()" type="submit" class="btn btn-primary">Filtrar</button></p>
+<p class="nav-item nav-link">Filtrar por novedad: <input   type="String" id="novedadToCheck" >
+        <button (click)="filterBook3()" type="submit" class="btn btn-primary">Filtrar</button></p>
+<p class="nav-item nav-link">Filtrar por bestseller: <input   type="String" id="bestsellerToCheck" >
+        <button (click)="filterBook4()" type="submit" class="btn btn-primary">Filtrar</button></p>
 
 <div class="container-fluid">
         <div class="w3-row-padding w3-padding-16 w3-center">
