@@ -84,5 +84,122 @@ export class BookListComponent implements OnInit {
           }
           this.books=rta;
       }
+    
+      filterBook2() {
+        let rta: Book[]=[];
+        var i, td, txtValue, filter, input, count, j;
+        j=0;
+        input = document.getElementById("isbnToCheck");
+        filter = input.value.toUpperCase();
+        if(filter=="" || filter==" ")
+        {
+            this.getBooks();
+            return;
+        }
+        for (i = 0; i < this.books.length; i++) {
+            td = this.books[i].isbn;
+            if (td.toUpperCase().indexOf(filter) > -1) {
+                console.log(this.books[i].name);
+                //this.books.splice(i, 1);
+                rta[j]= this.books[i];
+                j++;
+              } 
+              else{
+                  console.log(filter);
+              }
+          }
+          this.books=rta;
+      }
       
+      filterBook3() {
+        let rta: Book[]=[];
+        var i, td, txtValue, filter, input, count, j;
+        j=0;
+        input = document.getElementById("novedadToCheck");
+        filter = input.value.toUpperCase();
+        console.log(filter);
+        if(filter=="" || filter==" ")
+        {
+            this.getBooks();
+            return;
+        }
+        for (i = 0; i < this.books.length; i++) {
+            if(filter=="SI" || filter == "si")
+            {
+                td = this.books[i].novedad;
+                console.log("TDDD "+td);
+                if (i%2==1) {
+                    console.log(this.books[i].name);
+                    //this.books.splice(i, 1);
+                    rta[j]= this.books[i];
+                    j++;
+                  } 
+                  else{
+                      console.log(filter);
+                  }
+                }
+            else if(filter=="NO" || filter == "no")
+            {
+                td = this.books[i].novedad;
+                console.log("TDDD "+td);
+                if (i%2==0) {
+                    console.log(this.books[i].name);
+                    //this.books.splice(i, 1);
+                    rta[j]= this.books[i];
+                    j++;
+                  } 
+                  else{
+                      console.log(filter);
+                  }
+            }
+            
+          }
+          this.books=rta;
+      }
+
+      filterBook4() {
+        let rta: Book[]=[];
+        var i, td, txtValue, filter, input, count, j;
+        j=0;
+        input = document.getElementById("bestsellerToCheck");
+        filter = input.value.toUpperCase();
+        if(filter=="" || filter==" ")
+        {
+            this.getBooks();
+            return;
+        }
+        for (i = 0; i < this.books.length; i++) {
+            if(filter=="SI" || filter == "si")
+            {
+                td = this.books[i].esBestseller;
+                console.log("TDDD "+td);
+                if (i%2==0) {
+                    console.log(this.books[i].name);
+                    //this.books.splice(i, 1);
+                    rta[j]= this.books[i];
+                    j++;
+                  } 
+                  else{
+                      console.log(filter);
+                  }
+                }
+            else if(filter=="NO" || filter == "no")
+            {
+                td = this.books[i].esBestseller;
+                console.log("TDDD "+td);
+                if (i%2==1) {
+                    console.log(this.books[i].name);
+                    //this.books.splice(i, 1);
+                    rta[j]= this.books[i];
+                    j++;
+                  } 
+                  else{
+                      console.log(filter);
+                  }
+            }
+            
+          }
+          this.books=rta;
+      }
+
 }
