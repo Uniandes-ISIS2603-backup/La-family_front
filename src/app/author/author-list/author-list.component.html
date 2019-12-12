@@ -10,25 +10,13 @@
             </div>
             <br>
             <br>
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th class="h4">Author´s Name</th>    
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor = "let author of authors" >
-                        <td style="cursor: pointer;" (click)="onSelected(author.id)"> <dd>{{author.name}}</dd>
-                </td>
-                <td *ngxPermissionsOnly="['ADMIN']">
-                    <button class="btn btn-primary" (click)="showHideEdit(author.id)"><span class="fa fa-pencil"></span></button>
-                </td>
-                <td *ngxPermissionsOnly="['ADMIN']">
-                    <button class="btn btn-danger" (click)="deleteAuthor(author.id)"><span class="fa fa-trash"></span></button>
-                </td>
-                </tr>
-                </tbody>
-            </table>
+
+
+            <h1>Autores</h1>
+            <div class="card" *ngFor = "let author of authors">
+                    <img src={{author.image}} class="card-img-top" alt="..." (click)="onSelected(author.id)" height="250" width="250">
+                        <td style="cursor: pointer;" (click)="onSelected(author.id)"> <h3>{{author.name}}</h3>
+            </div>
         </div>
         <div class="col-8">
             <div *ngIf="showView">
