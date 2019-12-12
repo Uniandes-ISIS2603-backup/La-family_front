@@ -22,7 +22,7 @@ import {AppRoutingModule} from '../app-routing/app-routing.module';
         CommonModule,
         FormsModule,
     ],
-    declarations: [],//,EditorialListComponent, EditorialDetailComponent, EditorialCreateComponent, EditorialEditComponent],
+    declarations: [],//EditorialListComponent, EditorialDetailComponent, EditorialCreateComponent, EditorialEditComponent],
     providers: []
 })
 export class EditorialModule {}
