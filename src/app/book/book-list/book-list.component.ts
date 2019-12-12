@@ -5,6 +5,7 @@ import 'rxjs/add/operator/filter';
 
 import {Book} from '../../book/book';
 import {BookService} from '../../book/book.service';
+import { RtlScrollAxisType } from '@angular/cdk/platform';
 @Component({
     selector: 'app-book-list',
     templateUrl: './book-list.component.html',
@@ -15,7 +16,8 @@ export class BookListComponent implements OnInit {
     /**
     * The list of books to display
     */
-    @Input() books: Book[];
+    @Input() 
+    books: Book[];
 
     /**
     * The component's constructor
@@ -52,4 +54,20 @@ export class BookListComponent implements OnInit {
         }
     }
 
+    checkName(name: String) {
+        return name >= document.getElementById("nameToCheck").nodeValue;
+      }
+      
+      
+    myFunction() {
+        let hello: Book[];
+        hello = Book[this.books.length]
+        this.books.forEach(element => {
+            if(element.name == document.getElementById("nameToCheck").nodeValue)
+            {
+                hello.push(element);
+            }
+        });
+        return hello;
+      }
 }
