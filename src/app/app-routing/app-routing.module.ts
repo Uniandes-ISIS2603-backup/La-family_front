@@ -114,7 +114,7 @@ const routes: Routes = [
     },
     {
         path: 'home',
-        component: BookListComponent
+        component: HomeContentComponent
     },
     {
         path: '**',
